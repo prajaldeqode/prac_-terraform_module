@@ -28,11 +28,9 @@ output "name" {
 }
 
 output "result" {
-  for_each = module.xyz.random_string
-    value = each.key
+  value = module.xyz.random_string
 }
 
 module "xyz" {
   source = "./module"
-  env
 }
